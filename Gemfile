@@ -70,3 +70,13 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "dotenv-rails"
+gem 'devise'
+gem 'byebug'
+gem 'pundit'
+gem 'rails_admin'
+gem "ruby-vips", "~> 2.1.4"
+gem "mini_magick", "~> 4.11.0"
+gem 'bootstrap'
+gem "sassc-rails"
