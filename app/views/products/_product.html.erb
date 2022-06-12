@@ -1,0 +1,21 @@
+<div id="<%= dom_id product %>">
+
+  <% if product.pictures.any? %>
+    <ul>
+      <% product.pictures.each do |picture| %>
+        <% picture.pictures.each do |p| %>
+          <%= image_tag(p) %>
+        <% end %>
+      <% end %>
+    </ul>
+  <% end %>
+
+
+  <p>
+    <strong>Title:</strong>
+    <%= product.title %>
+  </p>
+
+  <%= product.description %>
+
+</div>

@@ -9,4 +9,5 @@ class User < ApplicationRecord
   def set_default_role
     self.role ||= :customer
   end
+  has_many :products, dependent: :destroy
 end
