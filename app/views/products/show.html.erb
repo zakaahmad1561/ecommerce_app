@@ -1,6 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<% if @product.pictures.any? %>
+    <ul>
+      <% @product.pictures.each do |picture| %>
+        <% picture.pictures.each do |p| %>
+          <%= image_tag(@product.image_as_thumbnail(p)) %>
+        <% end %>
+      <% end %>
+    </ul>
+  <% end %>
 
-<%= render @product %>
+
+  <p>
+    <strong>Title:</strong>
+    <%= @product.title %>
+  </p>
+
+  <%= @product.description %>
 
 <div>
   <% if policy(@product).edit? %>

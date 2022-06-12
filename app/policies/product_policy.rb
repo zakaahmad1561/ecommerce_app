@@ -10,12 +10,6 @@ class ProductPolicy < ApplicationPolicy
     true
   end
 
-  def new?
-    if user.present?
-      user.admin?
-    end
-  end
-
   def update?
     if user.present?
       user.admin?
