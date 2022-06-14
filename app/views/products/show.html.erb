@@ -2,7 +2,7 @@
     <ul>
       <% @product.pictures.each do |picture| %>
         <% picture.pictures.each do |p| %>
-          <%= image_tag(@product.image_as_thumbnail(p)) %>
+          <%= image_tag(p, style:"width:400px;hight:600") %>
         <% end %>
       <% end %>
     </ul>
