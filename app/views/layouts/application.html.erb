@@ -19,11 +19,15 @@
     <header class="header">
         <input type="search" name="googlesearch" placeholder="Search" class="search"/>
         <button class="Go">Go</button>
+        <% if current_user %>
+       <% else %>
         <%= link_to "Login", new_user_session_path,  class:"login"%>
         <%= link_to "Registration", new_user_registration_path, class:"registration" %>
+      <% end %>
+        
         <span class="span">$0.00(0 items)</span>
         <a href=""><i class="fa fa-cart-arrow-down"></i></a>
-        <%= render "layouts/alerts" %>
+        
     </header>
     <main>
         <nav class="nav">
@@ -38,6 +42,11 @@
                 <%= link_to "CONTACT", pages_contact_path,  class:"conact"%>
             </div>  
         </nav>
+        <% if current_user %>
+         <%= link_to "Edit Account", edit_user_registration_path,  class:"login"%>
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:"btn btn-primary" %>
+        <%end%>
+        <%= render "layouts/alerts" %>
         <%= yield %>
     </main>
     <section>
