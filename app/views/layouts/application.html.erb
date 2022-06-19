@@ -8,19 +8,62 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
   </head>
 
   <body>
-    <header>
-        <%= render "layouts/header" %>
+    <header class="header">
+        <input type="search" name="googlesearch" placeholder="Search" class="search"/>
+        <button class="Go">Go</button>
+        <%= link_to "Login", new_user_session_path,  class:"login"%>
+        <%= link_to "Registration", new_user_registration_path, class:"registration" %>
+        <span class="span">$0.00(0 items)</span>
+        <a href=""><i class="fa fa-cart-arrow-down"></i></a>
         <%= render "layouts/alerts" %>
     </header>
     <main>
-      <div class="container">
-        <div class="row">
-          <%= yield %>
-        </div>
-      </div>
+        <nav class="nav">
+            <div class="title">
+            <%=image_tag("Estore/title.png")%>
+            </div>
+            <div class="links">
+                <%= link_to "HOME", root_path,  class:"home"%>
+                <%= link_to "MEN", pages_men_path,  class:"man"%>
+                <%= link_to "WOMEN", pages_men_path,  class:"women"%>
+                <%= link_to "BLOGS", pages_blogs_path,  class:"blogs"%>
+                <%= link_to "CONTACT", pages_contact_path,  class:"conact"%>
+            </div>  
+        </nav>
+        <%= yield %>
     </main>
+    <section>
+        <div class="flex1">
+            <div class="button">
+                <h2>MORE INFO</h2>
+                <a href=""><li>How to order</li></a>
+                <a href=""><li>FAQ</li></a>
+                <a href=""><li>Location</li></a>
+                <a href=""><li>Shipping</li></a>
+                <a href=""><li>Membership</li></a>
+            </div>
+            <div class="button">
+                <h2>CONTACT US</h2>
+                <li>Contrary to popular belief</li>
+               <li>The standard chunk</li>
+               <li>Office: 0303-4825132</li>
+            </div>
+            <div class="button">
+                <h2>NEWSLETTER</h2>
+               <li>Sign up to get all news update and promo</li><br>
+               <input type="search" placeholder="" style="width: 260px; padding: 10px;"><input type="button" value="Sign up" style="padding: 10px; cursor: pointer; background-color: rgb(240, 119, 75);">
+            </div>
+            </div>
+            <h2 class="footer">@2022 New Store All Rights Reserved | Designed by Fatima/Muniba .</h2>
+        </footer>
+    </section>
   </body>
 </html>
