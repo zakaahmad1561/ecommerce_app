@@ -62,9 +62,16 @@
     border-bottom: 2px solid black;
     display: flex;
 }
+.navs{
+    width: 100%;
+    height: 12vh;
+    // background-color: white;
+    // border-bottom: 2px solid black;
+    display: flex;
+}
 img{
-    height: 30vh;
-    margin-left: -32px;
+    height: 9vh;
+    margin-left: 90px;
     margin-top: 5px;
 
 }
@@ -492,7 +499,7 @@ section.Blog .upper{
 .Blog .left .card{
     width: 500px;
     height: 300px;
-    background-image: url('images/b1.jpg');
+    background-image: url('Estore/images/b1.jpg');
     background-size: cover;
     margin-top: 10px;
 }
@@ -536,7 +543,7 @@ section.Blog .upper{
 .Blog .right .card{
     width: 500px;
     height: 300px;
-    background-image: url('images/b3.jpg');
+    background-image: url('Estore/images/b3.jpg');
     background-size: cover;
     margin-top: 10px;
 }
@@ -741,7 +748,7 @@ section.Blog .upper{
 	top:70px;
     width: 100%;
     height: 200px;
-	background-image: url("images/pi.jpg");
+	background-image: url("Estore/images/pi.jpg");
 	background-size: 100% 100%;
 	margin-right:17px;
 
@@ -751,7 +758,7 @@ section.Blog .upper{
 	top:70px;
 	height:200px;
 	width:100%;
-	background-image: url("images/pi2.jpg");
+	background-image: url("Estore/images/pi2.jpg");
 	background-size: 100% 100%;
 	margin-right:17px;
 }
@@ -760,7 +767,7 @@ section.Blog .upper{
 	top:70px;
 	height:200px;
 	width:100%;
-	background-image: url("images/pi1.jpg");
+	background-image: url("Estore/images/pi1.jpg");
 	background-size: 100% 100%;
 	margin-right:17px;
 }
@@ -769,7 +776,7 @@ section.Blog .upper{
 	top:70px;
 	height:200px;
 	width:100%;
-	background-image: url("images/pi.jpg");
+	background-image: url("Estore/images/pi.jpg");
 	background-size: 100% 100%;
 	margin-right:17px;
 }
@@ -778,7 +785,7 @@ section.Blog .upper{
 	top:70px;
 	height:200px;
 	width:100%;
-	background-image: url("images/pi4.jpg");
+	background-image: url("Estore/images/pi4.jpg");
 	background-size: 100% 100%;
     margin-right:17px;
 
@@ -788,7 +795,7 @@ section.Blog .upper{
 	top:70px;
 	height:200px;
 	width:100%;
-	background-image: url("images/pi5.jpg");
+	background-image: url("Estore/images/pi5.jpg");
 	background-size: 100% 100%;
 	margin-right:17px;
 }
@@ -1112,4 +1119,11 @@ body{
     transform: scale(1.04);
     z-index: 2;
     overflow: hidden;
+}
+
+.title{
+    height: 9vh;
+    margin-left: -82px;
+    margin-top: 5px;
+    
 }
