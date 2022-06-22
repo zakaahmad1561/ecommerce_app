@@ -78,3 +78,4 @@ gem 'pundit'
 gem 'rails_admin'
 gem 'bootstrap'
 gem "sassc-rails"
+gem "letter_opener", group: :development
