@@ -1,26 +1,36 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
+<div class="form__main">
+    <h2>Login</h2>
+    <p>Sign into your account</p>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label"><%= f.label :email %></label>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class:"form-control"%>
+      </div> 
+      <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label"><%= f.label :password %></label>
+      <%= f.password_field :password, autocomplete: "current-password",class:"form-control" %>
+      </div> 
+      <div class="mb-3 form-check" style="padding-left:0px !important;">
+      <% if devise_mapping.rememberable? %>
+      <div class="field">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
-    </div>
-  <% end %>
+      </div>
+      <% end %>
+      </div>
+      <div class="d-grid gap-2 mb-3">
+      <%= f.submit "Log in",class:"btn btn-outline-danger" %>
+      </div>
+      <div class="d-grid gap-2">
+      <%= render "devise/shared/sign_up" %>
+      </div>
+      <div class="d-flex justify-content-end">
+      <%= render "devise/shared/forget_password" %>
+      </div>
+    <% end %>
+    
+</div>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+
+
